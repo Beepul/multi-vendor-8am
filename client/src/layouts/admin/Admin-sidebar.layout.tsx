@@ -1,9 +1,9 @@
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import logo from "../../assets/market-matrix-logo-yellow.png"
 import { Button } from "../../components/ui/button"
-import { AlignJustify, Home, Proportions } from "lucide-react"
+import { AlignJustify, DollarSign, Home, Proportions } from "lucide-react"
 import DashboardLinkComponent from "../../components/my-components/dashboard/Dashboard-link.component"
-import { MdOutlineAdminPanelSettings, MdOutlineLibraryAdd, MdOutlineProductionQuantityLimits, MdOutlineSpaceDashboard } from "react-icons/md"
+import { MdOutlineAdminPanelSettings, MdOutlineLibraryAdd, MdOutlineProductionQuantityLimits, MdOutlineRateReview, MdOutlineSpaceDashboard } from "react-icons/md"
 import { NavLink } from "react-router-dom"
 import { TfiLayoutCtaCenter } from "react-icons/tfi";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/ui/accordion"
@@ -13,6 +13,10 @@ import { AiOutlineProduct, AiOutlineUserAdd } from "react-icons/ai"
 import { TbBrandProducthunt, TbCategory2, TbCategoryPlus, TbCircleLetterB, TbLetterB } from "react-icons/tb"
 import { BsNodePlus } from "react-icons/bs";
 import { PiUsersThree } from "react-icons/pi";
+import { CiDollar } from "react-icons/ci"
+import { FaDollarSign } from "react-icons/fa6"
+import { GrTransaction } from "react-icons/gr";
+
 
 
 
@@ -20,7 +24,7 @@ import { PiUsersThree } from "react-icons/pi";
 const AdminSideBarLayout = ({active}: {active: string}) => {
     let showFUllSidebar = true
     return (<>
-        <aside className="min-h-screen bg-blue-950 py-4 px-8 text-white w-64">
+        <aside className="py-4 px-8 text-white w-64 max-h-[90%] overflow-y-auto">
             <ul>
                 <li className="pb-2 mb-2">
                     <span className="text-xs text-gray-300 font-semibold mb-2 inline-block">Overview</span>
@@ -39,12 +43,12 @@ const AdminSideBarLayout = ({active}: {active: string}) => {
                             Users
                         </NavLink>
                     </div>
-                    <div className="pl-3 mb-4">
+                    {/* <div className="pl-3 mb-4">
                         <NavLink to={'/admin/add-user'} className={`flex items-center gap-1 text-sm ${active === 'user' && 'text-yellow-300'}`}>
                             <AiOutlineUserAdd className="text-lg"/>
                             Add User
                         </NavLink>
-                    </div>
+                    </div> */}
                     <div className="pl-3 mb-4">
                         <NavLink to={'/admin/orders'} className={`flex items-center gap-1 text-sm ${active === 'orders' && 'text-yellow-300'}`}>
                             <LiaLuggageCartSolid className="text-lg"/>
@@ -69,10 +73,22 @@ const AdminSideBarLayout = ({active}: {active: string}) => {
                             Categories
                         </NavLink>
                     </div>
-                    <div className="pl-3">
+                    <div className="pl-3 mb-4">
                         <NavLink to={'/admin/brands'} className={`flex items-center gap-1 text-sm ${active === 'brands' && 'text-yellow-300'}`}>
                             <TbCircleLetterB className="text-lg"/>
                             Brands
+                        </NavLink>
+                    </div>
+                    <div className="pl-3 mb-4">
+                        <NavLink to={'/admin/transactions'} className={`flex items-center gap-1 text-sm ${active === 'transactions' && 'text-yellow-300'}`}>
+                            <GrTransaction className="text-lg"/>
+                            Transactions
+                        </NavLink>
+                    </div>
+                    <div className="pl-3 mb-4">
+                        <NavLink to={'/admin/reviews'} className={`flex items-center gap-1 text-sm ${active === 'transactions' && 'text-yellow-300'}`}>
+                            <MdOutlineRateReview className="text-lg"/>
+                            Reviews
                         </NavLink>
                     </div>
                     

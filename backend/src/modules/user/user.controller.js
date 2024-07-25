@@ -98,6 +98,14 @@ class UserController{
             next(err)
         }
     }
+
+    delete = async (req, res, next) => {
+        try{
+
+        }catch (err){
+            next(err)
+        }
+    }
 }
 
 

@@ -37,6 +37,9 @@ import AdminAddBrandPage from "../pages/admin/admin-add-brand.page";
 import AdminAllBrandsPage from "../pages/admin/admin-all-brands.page";
 import AdminEditCategory from "../pages/admin/admin-edit-category.page";
 import AdminEditBrand from "../pages/admin/admin-edit-brand.page";
+import AdminAllUsersPage from "../pages/admin/admin-all-users.page";
+import AdminAllBannerPage from "../pages/admin/admin-all-banner.page";
+import AdminAddBannerPage from "../pages/admin/admin-add-banner.page";
 
 const RouterConfig = () => {
     const {setLoggedInUser,setUserLoading, isUserLoading, loggedInUser} = useAuth()
@@ -247,6 +250,21 @@ const RouterConfig = () => {
                             <Route path="categories" element={
                                 <AdminLayout active="categories">
                                     <AdminAllCategoriesPage />
+                                </AdminLayout>
+                            }></Route>
+                            <Route path="users" element={
+                                <AdminLayout active="users">
+                                    <AdminAllUsersPage />
+                                </AdminLayout>
+                            }></Route>
+                            <Route path="banner" element={
+                                <AdminLayout active="banner">
+                                    <AdminAllBannerPage />
+                                </AdminLayout>
+                            }></Route>
+                            <Route path="add-banner" element={
+                                <AdminLayout active="banner">
+                                    <AdminAddBannerPage />
                                 </AdminLayout>
                             }></Route>
                             <Route path="settings" element={

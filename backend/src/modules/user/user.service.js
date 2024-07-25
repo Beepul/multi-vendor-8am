@@ -18,6 +18,7 @@ class UserService {
                 .sort({_id: "desc"})
                 .skip(skip)
                 .limit(limit)
+                .select('-password')
             return response
         } catch (error) {
             throw error

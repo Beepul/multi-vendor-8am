@@ -5,15 +5,15 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { NavLink } from "react-router-dom"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "../../ui/alert-dialog"
 import LoaderComponent from "./Loader.component"
-import { Brand, Category, Product } from "../../../types"
+import { Brand, Category, Product, User } from "../../../types"
 
 type Props = {
     openDropDown: boolean
     setOpenDropDown: React.Dispatch<React.SetStateAction<boolean>>
     openDialog: boolean
     setOpenDialog: React.Dispatch<React.SetStateAction<boolean>>
-    data: Brand | Category | Product,
-    dataType: 'brand' | 'category' | 'product'
+    data: Brand | Category | Product | User,
+    dataType: 'brand' | 'category' | 'product' | 'user'
     deleteHandler: (id: string) => void
     deleteLoading: boolean
 }

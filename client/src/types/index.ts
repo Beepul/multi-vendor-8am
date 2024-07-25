@@ -39,8 +39,21 @@ export type User = {
     status: "active" | "inactive",
     image?: string | null,
     phone?: string | null,
+    createdBy: {
+        _id: string,
+        name: string,
+        email: string,
+        role: string,
+    } | null,
+    updatedBy: {
+        _id: string,
+        name: string,
+        email: string,
+        role: string,
+    } | null,
+    createdAt: string,
+    updatedAt: string | null 
 }
-
 
 type Token = {
     accessToken: string,
